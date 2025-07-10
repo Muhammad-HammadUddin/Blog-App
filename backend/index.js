@@ -10,9 +10,13 @@ import cors from "cors";
 const app = express();
 app.use(clerkMiddleware());
 app.use(cors({
-  origin: "https://blog-frontend-six-fawn.vercel.app",
-  credentials: true, 
+  origin: [
+    "https://blog-frontend-six-fawn.vercel.app",
+    "https://blog-frontend-7g1tp2e9q-hammads-projects-58b134f4.vercel.app"
+  ],
+  credentials: true,
 }));
+
 app.use(express.json());
 
 // DB Connection
